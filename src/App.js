@@ -31,19 +31,19 @@ function App() {
               Default radio
             </label>
             <div className="form-check">
-              <input className="form-check-input" type="radio" value="1" id="radio1" name="radio" checked={radio === '1'} onClick={handleradio}/>
+              <input className="form-check-input" type="radio" value="1" id="radio1" name="radio" checked={radio === '1'} onChange={handleradio}/>
               <label className="form-check-label" htmlFor="radio1">
                 Radio 1
               </label>
             </div>
             <div className="form-check">
-              <input className="form-check-input" type="radio" value="2" id="radio2" name="radio" checked={radio === '2'} onClick={handleradio}/>
+              <input className="form-check-input" type="radio" value="2" id="radio2" name="radio" checked={radio === '2'} onChange={handleradio}/>
               <label className="form-check-label" htmlFor="radio2">
                 Radio 2
               </label>
             </div>
             <div className="form-check">
-              <input className="form-check-input" type="radio" value="3" id="radio3" name="radio" checked={radio === '3'} onClick={handleradio}/>
+              <input className="form-check-input" type="radio" value="3" id="radio3" name="radio" checked={radio === '3'} onChange={handleradio}/>
               <label className="form-check-label" htmlFor="radio3">
                 Radio 3
               </label>
@@ -52,19 +52,19 @@ function App() {
               Default checkbox
             </label>
             <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="1" id="checkbox1" name="checkbox" checked={checkbox[0]} onClick={handleCheck}/>
+              <input className="form-check-input" type="checkbox" value="1" id="checkbox1" name="checkbox"  onChange={handleCheck}/>
               <label className="form-check-label" htmlFor="checkbox1">
                 Checkbox 1
               </label>
             </div>
             <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="2" id="checkbox2" name="checkbox" checked={checkbox[1]} onClick={handleCheck}/>
+              <input className="form-check-input" type="checkbox" value="2" id="checkbox2" name="checkbox"  onChange={handleCheck}/>
               <label className="form-check-label" htmlFor="checkbox2">
                 Checkbox 2
               </label>
             </div>
             <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="3" id="checkbox3" name="checkbox" checked={checkbox[2]} onClick={handleCheck}/>
+              <input className="form-check-input" type="checkbox" value="3" id="checkbox3" name="checkbox"  onChange={handleCheck}/>
               <label className="form-check-label" htmlFor="checkbox3">
                 Checkbox 3
               </label>
