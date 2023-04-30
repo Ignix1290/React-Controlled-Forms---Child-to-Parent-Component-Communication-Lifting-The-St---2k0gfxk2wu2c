@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   const [textArea ,setTextArea] = useState('');
   const [radio ,setRadio] = useState('');
-  const [checkbox ,setCheckBox] = useState();
+  const [checkbox ,setCheckBox] = useState([]);
 
   function handleradio(e){
     console.log(e.target.value);
@@ -12,7 +12,7 @@ function App() {
   }
 
   function handleCheck(e){
-    setCheckBox(e.target.value);
+    setCheckBox(prevArray=>[...prevArray,e.target.value+',']);
     console.log(e.target.value);
   }
 
@@ -52,19 +52,19 @@ function App() {
               Default checkbox
             </label>
             <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="1" id="checkbox1" name="checkbox"  onChange={handleCheck}/>
+              <input className="form-check-input" type="checkbox" value="1" id="checkbox1" name="checkbox"  onClick={handleCheck}/>
               <label className="form-check-label" htmlFor="checkbox1">
                 Checkbox 1
               </label>
             </div>
             <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="2" id="checkbox2" name="checkbox"  onChange={handleCheck}/>
+              <input className="form-check-input" type="checkbox" value="2" id="checkbox2" name="checkbox"  onClick={handleCheck}/>
               <label className="form-check-label" htmlFor="checkbox2">
                 Checkbox 2
               </label>
             </div>
             <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="3" id="checkbox3" name="checkbox"  onChange={handleCheck}/>
+              <input className="form-check-input" type="checkbox" value="3" id="checkbox3" name="checkbox"  onClick={handleCheck}/>
               <label className="form-check-label" htmlFor="checkbox3">
                 Checkbox 3
               </label>
