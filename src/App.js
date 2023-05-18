@@ -12,7 +12,14 @@ function App() {
   }
 
   function handleCheck(e){
-    setCheckBox(prevArray=>[...prevArray,e.target.value+',']);
+    console.log(e);
+    if(e.target.checked){
+      setCheckBox(prevArray=>[...prevArray,e.target.value]);
+    }
+    else{
+      setCheckBox(prevArray=>prevArray.filter(value=>value!==e.target.value));
+    }
+    
     console.log(e.target.value);
   }
 
@@ -52,19 +59,19 @@ function App() {
               Default checkbox
             </label>
             <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="1" id="checkbox1" name="checkbox"  onClick={handleCheck}/>
+              <input className="form-check-input" type="checkbox" value="1," id="checkbox1" name="checkbox"  onClick={handleCheck}/>
               <label className="form-check-label" htmlFor="checkbox1">
                 Checkbox 1
               </label>
             </div>
             <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="2" id="checkbox2" name="checkbox"  onClick={handleCheck}/>
+              <input className="form-check-input" type="checkbox" value="2," id="checkbox2" name="checkbox"  onClick={handleCheck}/>
               <label className="form-check-label" htmlFor="checkbox2">
                 Checkbox 2
               </label>
             </div>
             <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="3" id="checkbox3" name="checkbox"  onClick={handleCheck}/>
+              <input className="form-check-input" type="checkbox" value="3," id="checkbox3" name="checkbox"  onClick={handleCheck}/>
               <label className="form-check-label" htmlFor="checkbox3">
                 Checkbox 3
               </label>
